@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <style>
+      :root{
+        box-sizing: border-box;
+        --width:0%;
+      }
+      body{
+        margin: 0px;
+      }
+      .sidebar{
+        display:flex;
+        inline-size:25%;
+        block-size:100vh;
+        background-color: #8EC5FC;    
+        background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+        flex-direction:column;
+
+      }
+      .item{
+        overflow:hidden;
+        height:12%;
+        width: 90%;
+        cursor:pointer;
+        background-color:white ;
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
+        box-shadow:3px 4px 15px rgb(250, 248, 248);
+        
+        
+      }
+      .item:first-child{
+        margin-top:50%;    
+      }
+      .sidebar *+*{
+        margin-top:5%;
+      }
+       .after{
+        display: block;
+        float:right;
+        content:"";
+        background-color: #21D4FD;
+        background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+        width:var(--width);
+        height:100%;
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
+        transition: width 0.5s;
+        
+        
+      }
+      .item:hover .after{
+        
+        --width:15%;
+ 
+      }
+      .media-body{
+       margin-top:0.8em;
+       font-size:35px;
+       font-family: 'Ubuntu', sans-serif;
+       
+        
+      }
+      .media{
+        float:left;
+        font-size: 50px;
+      }
+
+  
+     
+    
+    </style>
+  </head>
+  <body>
+    <script>
+    
+     
+    </script>
+    <aside class="sidebar">
+      <div class="item education">
+        <div class="after"></div>
+        <span class="media">🧑‍🎓</span>
+        <p class="media-body">Education</p>
+      </div>
+      <div class="item projects">
+        <div class="after"></div>
+        <span class="media">🔖</span>
+        <p class="media-body">Projects</p>
+
+      </div>
+      <div class="item resume">
+        <div class="after"></div>
+        <span class="media">🧾</span>
+        <p class="media-body">Resume</p>
+
+      </div>
+      <div class="item skills">
+        <div class="after"></div>
+        <span class="media">💪</span>
+        <p class="media-body">Skills</p>
+
+      </div>
+      <div class="item contact">
+        <div class="after"></div>
+        <span class="media">☎️</span>
+        <p class="media-body">Contatct</p>
+
+      </div>
+      
+    </aside>
+  </body>
+</html>
