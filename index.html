@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     
     <style>
-      :root{
+     
+      @media screen and (max-width:480px){
+        html{
+          font-size:10px;
+        }
+        :root{
         box-sizing: border-box;
         --width:0%;
       }
@@ -20,22 +26,24 @@
         background-color: #8EC5FC;    
         background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
         flex-direction:column;
-
+        justify-content: space-around;
       }
       .item{
         overflow:hidden;
         height:12%;
         width: 90%;
+        font-size:1rem;
         cursor:pointer;
         background-color:white ;
         border-top-right-radius:10px;
         border-bottom-right-radius:10px;
         box-shadow:3px 4px 15px rgb(250, 248, 248);
+        transition: height 1s, width 1s ,font-size 0.5s;
         
         
       }
       .item:first-child{
-        margin-top:50%;    
+        margin-top:40%;    
       }
       .sidebar *+*{
         margin-top:5%;
@@ -57,19 +65,111 @@
       .item:hover .after{
         
         --width:15%;
- 
       }
-      .media-body{
-       margin-top:0.8em;
-       font-size:35px;
-       font-family: 'Ubuntu', sans-serif;
-       
+      .item:hover{
+        height:2.8em;
+        width:110%;
+        font-size:1.2rem;
+        
+        
         
       }
+
+      .media-body{
+       margin:1rem;
+       font-family: 'Ubuntu', sans-serif;
+       transition: margin 0.5;
+      }
+    
+    
       .media{
         float:left;
         font-size: 50px;
       }
+
+      }
+      @media screen and (min-width:781px) {
+        
+        html{
+        font-size: 35px;
+      }
+      :root{
+        box-sizing: border-box;
+        --width:0%;
+      }
+      body{
+        margin: 0px;
+      }
+      .sidebar{
+        display:flex;
+        inline-size:25%;
+        block-size:100vh;
+        background-color: #8EC5FC;    
+        background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+        flex-direction:column;
+        justify-content: space-around;
+      }
+      .item{
+        overflow:hidden;
+        height:12%;
+        width: 90%;
+        font-size:1rem;
+        cursor:pointer;
+        background-color:white ;
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
+        box-shadow:3px 4px 15px rgb(250, 248, 248);
+        transition: height 1s, width 1s ,font-size 0.5s;
+        
+        
+      }
+      .item:first-child{
+        margin-top:40%;    
+      }
+      .sidebar *+*{
+        margin-top:5%;
+      }
+       .after{
+        display: block;
+        float:right;
+        content:"";
+        background-color: #21D4FD;
+        background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+        width:var(--width);
+        height:100%;
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
+        transition: width 0.5s;
+        
+        
+      }
+      .item:hover .after{
+        
+        --width:15%;
+      }
+      .item:hover{
+        height:2.8em;
+        width:110%;
+        font-size:1.2rem;
+        
+        
+        
+      }
+
+      .media-body{
+       margin:1rem;
+       font-family: 'Ubuntu', sans-serif;
+       transition: margin 0.5;
+      }
+    
+    
+      .media{
+        float:left;
+        font-size: 50px;
+      }
+
+    }
+
 
   
      
