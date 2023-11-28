@@ -1,219 +1,215 @@
 <!DOCTYPE html>
-
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="./portfolio_files/css2" rel="stylesheet">
-    
+<html>
+  <head>
     <style>
-     
-      @media screen and (max-width:480px){
-        html{
-          font-size:10px;
-        }
-        :root{
-        box-sizing: border-box;
-        --width:0%;
-      }
-      body{
-        margin: 0px;
-      }
-      .sidebar{
-        display:flex;
-        inline-size:25%;
-        block-size:100vh;
-        background-color: #8EC5FC;    
-        background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-        flex-direction:column;
-        
-      }
-      .item{
-        overflow:hidden;
-        height:3rem;
-        width: 90%;
-        font-size:1rem;
-        cursor:pointer;
-        background-color:white ;
-        border-top-right-radius:10px;
-        border-bottom-right-radius:10px;
-        box-shadow:3px 4px 15px rgb(250, 248, 248);
-        transition: height 1s, width 1s ,font-size 0.5s;
-        
-        
-      }
-      .item:first-child{
-         margin-top:200%;
-      }
-      .sidebar *+*{
-        margin-top:10%;
-      }
-       .after{
-        display: block;
-        float:right;
-        content:"";
-        background-color: #21D4FD;
-        background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
-        width:var(--width);
-        height:100%;
-        border-top-right-radius:10px;
-        border-bottom-right-radius:10px;
-        transition: width 0.5s;
-        
-        
-      }
-      .item:hover .after{
-        
-        --width:15%;
-      }
-      .item:hover{
-        height:3rem;
-        width:110%;
-        font-size:1.2rem;
-        
-        
-        
-      }
-
-      .media-body{
-       margin:1rem;
-       font-family: 'Ubuntu', sans-serif;
-       transition: margin 0.5;
-      }
-    
-    
-      .media{
-        float:left;
-        font-size: 1rem;
-      }
-
-      }
-  
-  
-      @media screen and (min-width:781px) {
-        
-        html{
-        font-size: 35px;
+      html{
+        font-size:100%;
       }
       :root{
         box-sizing: border-box;
-        --width:0%;
+      }
+      @font-face {
+        font-family:Valoon;
+        src: url("./valoon/Valoon.ttf");
+      }
+      @font-face {
+        font-family:cheri;
+        src: url(./cheri/CHERL___.TTF);
       }
       body{
         margin: 0px;
+        padding: 0px;
+        background-color: rgb(205, 205, 200);
+        background-size:cover;
+        background-repeat: no-repeat;
+
       }
-      .sidebar{
+      .main{
+        min-height:100vh;
+        display: flex;
+        flex-direction: row;
+        
+      }
+      .ShowCase{
+        display: flex;
+        flex-direction: column;
+        flex:0.63;
+        border-right: 10px solid rgb(197, 195, 195); 
+        border-top: 10px solid rgb(197, 195, 195); 
+        border-bottom: 10px solid rgb(197, 195, 195); ;
+        box-shadow:15px 25px 800px 120px rgb(197, 195, 195);
+        
+      }
+      .MyPhotoContainer{
         display:flex;
-        inline-size:25%;
-        block-size:100vh;
-        background-color: #8EC5FC;    
-        background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-        flex-direction:column;
-        justify-content: space-around;
-      }
-      .item{
-        overflow:hidden;
-        height:12%;
-        width: 90%;
-        font-size:1rem;
-        cursor:pointer;
-        background-color:white ;
-        border-top-right-radius:10px;
-        border-bottom-right-radius:10px;
-        box-shadow:3px 4px 15px rgb(250, 248, 248);
-        transition: height 1s, width 1s ,font-size 0.5s;
-        
+        flex:0.37;
+        margin:0;
+        padding: 0px;
+        border-right:10px solid rgb(197, 195, 195); 
+       
         
       }
-      .item:first-child{
-        margin-top:40%;    
+      .MyPhoto{
+        background-image: url(portfoliophoto.jpg);
+        background-position:70% 5%;
+        background-size:150%;
+        flex:1;
+        background-color: aquamarine;
+        filter: contrast(90%);
+      
       }
-      .sidebar +{
-        margin-top:5%;
-      }
-       .after{
-        display: block;
-        float:right;
-        content:"";
-        background-color: #21D4FD;
-        background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
-        width:var(--width);
-        height:100%;
-        border-top-right-radius:10px;
-        border-bottom-right-radius:10px;
-        transition: width 0.5s;
-        
+      
+      .Intro{
+        display: flex;
+        margin-top:0%;
+        margin-right:auto;
+        margin-left:auto;
+        align-self:flex-start;
+        width:55rem;
+        height:auto;
+        flex-direction: column;
         
       }
-      .item:hover .after{
+      .Intro p{
+        margin-top:0%;
+        margin:0px;
+        font-size:4rem;
+        font-family: cheri;
         
-        --width:15%;
       }
-      .item:hover{
-        height:2.8em;
-        width:110%;
-        font-size:1.2rem;
-        
-        
-        
+      
+      .Intro>.Name>span{
+        color:white;
+        background-color:#3e4931;
+      }
+      .Intro>.Greeting> span{
+        color:rgb(100, 0, 103)
       }
 
-      .media-body{
-       margin:1rem;
-       font-family: 'Ubuntu', sans-serif;
-       transition: margin 0.5;
+      .Profile{
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        flex:1;
+        flex-wrap: wrap;
+        align-self: center;
+        margin-top:0%;
+        border:1px solid transparent;
+        justify-content:space-evenly;
+        
+      }
+      .Item{
+        display:flex;
+        flex-direction: column;
+        background-color: transparent;
+        width:25%;
+        margin:2%;
+        border-radius:10px;
+        cursor: pointer;
+      }
+      
+      .Image{
+        width:100%;
+        flex:1.5;
+        border-radius:10px;
+        font-size: 8rem;
+        border:0px solid #6b9080;
+        box-shadow: 1px 1px 10px 1px #6b9080;
+        background-color:#c0f7dc;
+        clip-path: circle(100%);
+        
       }
     
-    
-      .media{
-        float:left;
-        font-size:50px;
-      }
-
-    }
-
-
-  
      
+      
+      .Image:hover{
+        box-shadow: 1px 1px 10px 1px white;
+      }
+      .Image p{
+        margin:0 2rem;
+        text-shadow:1px 10px 10px grey;
+      }
     
+      .Button{
+        margin-top:1rem;
+        width:100%;
+        flex:0.3;
+        border-radius: 10px;
+        font-size: 8rem;
+        border:0px solid #6b9080;
+        box-shadow: 1px 1px 10px 1px #6b9080;
+        background-color:#59424f;
+      }
+      .Button p{
+        margin:0px 3.5rem;
+        color:white;
+        font-size:2rem;
+        font-family: valoon;
+      }
+      .Button:hover{
+        box-shadow: 1px 1px 10px 1px white;
+      }
+
     </style>
   </head>
   <body>
+    <div class="main">
+    <div class="MyPhotoContainer">
+      <div class="MyPhoto">
+      </div>
+    </div>
+    <div class="ShowCase">
+      <div class="Intro">
+      <p class="Greeting">Hello <span>!</span></p>
+      <p class="Name">I am <span id="Prof">Tejas Rajput</span></p>
+    </div>
+    <div class="Profile">
+      <div class="Item Education">
+        <div class="Image">
+          <p>🧑‍🎓</p></div>
+        <div class="Button">
+          <p>Education</p></div>
+      </div>
+      <div class="Item Project">
+        <div class="Image"><p>⚒️</p></div>
+        <div class="Button"><p>Project</p></div>
+      </div>
+      <div class="Item Resume">
+        <div class="Image"><p>🧾</p></div>
+        <div class="Button"><p>Resume</p></div>
+      </div>
+      <div class="Item Skills">
+        <div class="Image">
+          <p>💪</p></div>
+        <div class="Button"><p>Skills</p></div>
+      </div>
+      <div class="Item Blog">
+        <div class="Image"><p>✍️</p></div>
+        <div class="Button"><p>Blog</p></div>
+      </div>
+      <div class="Item Contatct">
+        <div class="Image"><p>📨</p></div>
+        <div class="Button"><p>Contatct</p></div>
+      </div>
+
+    </div>
+    </div>
+  </div>
     <script>
-    
-     
+      let x=0;
+      const myprof=["Statistician","Data-Scientist","Curious Soul",
+    "Front-end Developer","Tejas Rajput"];
+      function ok(){
+        x+=1
+      if(x>myprof.length){
+        x=0;
+      }
+      if(x<myprof.length){
+      document.getElementById("Prof").innerHTML=myprof[x];
+      }
+      }
+     setInterval(ok,2000)
     </script>
-    <aside class="sidebar">
-      <div class="item education">
-        <div class="after"></div>
-        <span class="media">🧑‍🎓</span>
-        <p class="media-body">Education</p>
-      </div>
-      <div class="item projects">
-        <div class="after"></div>
-        <span class="media">🔖</span>
-        <p class="media-body">Projects</p>
 
-      </div>
-      <div class="item resume">
-        <div class="after"></div>
-        <span class="media">🧾</span>
-        <p class="media-body">Resume</p>
-
-      </div>
-      <div class="item skills">
-        <div class="after"></div>
-        <span class="media">💪</span>
-        <p class="media-body">Skills</p>
-
-      </div>
-      <div class="item contact">
-        <div class="after"></div>
-        <span class="media">☎️</span>
-        <p class="media-body">Contatct</p>
-
-      </div>
-      
-    </aside>
-  
-</body></html>
+  </body>
+</html>
